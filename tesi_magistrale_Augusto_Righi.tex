@@ -1,0 +1,61 @@
+\documentclass[12pt,a4paper]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+\usepackage{graphicx}
+\usepackage[margin=2.5cm]{geometry}
+
+% Numeri di pagina al centro (stile "plain" = numero in basso al centro)
+\pagestyle{plain}
+
+\begin{document}
+
+% ---------- Frontespizio ----------
+\begin{titlepage}
+  \centering
+  {\Large Nome dell'Università\par}
+  {\large Dipartimento di \dots\par}
+  {\large Corso di Laurea Magistrale in \dots\par}
+
+  \vspace{4cm}
+  {\Huge\bfseries Titolo della tesi\par}
+
+  \vfill
+  \begin{flushleft}
+    \textbf{Relatore:} Prof. Nome Cognome
+  \end{flushleft}
+  \begin{flushright}
+    \textbf{Candidato:} Augusto Righi\\
+    \textbf{Matricola:} 000000
+  \end{flushright}
+
+  \vspace{1cm}
+  Anno Accademico 2025/2026
+\end{titlepage}
+
+% ---------- Indici ----------
+\tableofcontents
+\clearpage
+\listoffigures
+
+% ---------- Contenuto ----------
+\chapter{Introduzione}
+Testo dell'introduzione. Esempio di citazione~\cite{knuth1984texbook}.
+
+\chapter{Secondo capitolo}
+Testo.
+
+% ---------- Bibliografia ----------
+\clearpage
+\addcontentsline{toc}{chapter}{Bibliografia}
+\bibliographystyle{plain}
+\bibliography{references}
+
+% ---------- Ringraziamenti ----------
+\clearpage
+\chapter*{Ringraziamenti}
+\addcontentsline{toc}{chapter}{Ringraziamenti}
+Ringrazio \dots
+
+\end{document}

@@ -1,0 +1,6 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {chapter}{\numberline {1}Introduzione}{3}{}%
+\contentsline {chapter}{\numberline {2}Secondo capitolo}{4}{}%
+\contentsline {chapter}{Bibliografia}{5}{}%
+\contentsline {chapter}{Ringraziamenti}{5}{}%
