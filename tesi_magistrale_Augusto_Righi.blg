@@ -1,13 +1,15 @@
 This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: tesi_magistrale_Augusto_Righi.aux
+Reallocating 'name_of_file' (item size: 1) to 29 items.
+A level-1 auxiliary file: capitoli/01_introduzione.aux
 Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: plain.bst
 Reallocating 'name_of_file' (item size: 1) to 13 items.
 Database file #1: bibliografia.bib
 You've used 1 entry,
             2118 wiz_defined-function locations,
-            503 strings with 4272 characters,
+            504 strings with 4300 characters,
 and the built_in function-call counts, 239 in all, are:
 = -- 20
 > -- 7

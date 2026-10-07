@@ -1,6 +1,8 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
-\contentsline {chapter}{\numberline {1}Introduzione}{3}{}%
-\contentsline {chapter}{\numberline {2}Secondo capitolo}{4}{}%
+\contentsline {chapter}{Introduzione}{3}{}%
+\contentsline {section}{\numberline {0.1}Contesto storico}{3}{}%
+\contentsline {section}{\numberline {0.2}Obiettivi del lavoro}{3}{}%
+\contentsline {chapter}{\numberline {1}Secondo capitolo}{4}{}%
 \contentsline {chapter}{Bibliografia}{5}{}%
 \contentsline {chapter}{Ringraziamenti}{6}{}%

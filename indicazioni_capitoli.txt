@@ -1,0 +1,16 @@
+Stato dell'arte: biblio (volume Prof. Dragoni + altri) dove si mostra la mancanza dello studio approfondito degli esperimenti 
+(Righi è famoso per aver chiuso la stagione di EM, mostrando la perfetta analogia di comportamento tra luce solare e "oscillazioni elettriche"). 
+Ma questa ANALOGIA non è mai stata studiata a dovere. 
+Questo è il tema della tesi. 
+Si mostra che gli esperimenti di Righi offrono 
+un excursus nella storia della luce: dalla rifrazione di Tolomeo, alla diffrazione di Grimaldi alle relazioni di intensità di Fresnel (ottocento)
+
+Cap 1: stato arte (ruolo di Righi nella storia di EM e studi attuali e recenti): si mostra che manca lo studio dell'ANALOGIA sviluppata da Righi tramite i suoi esperimenti. 
+
+Cap 2: Prima di entrare nel merito si ricostruisce la storia di EM e ruolo di Righi.
+
+Cap 3: ottica delle oscillazioni elettriche (rassegna approfondita degli esperimenti ma non SOLO: 
+la novità sta nell'andare a mostrare con chiarezza quali solo gli esperimenti sulla luce solare a cui Righi si riferisce e a che epoca storica risalgono)
+
+Cap 4: tra storico e contemporaneo (confronto tra banco EM di Righi e banco Phywe per micro-onde in lab)
+
