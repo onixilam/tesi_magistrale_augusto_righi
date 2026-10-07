@@ -41,7 +41,7 @@
 
 % ---------- Contenuto ----------
 \chapter{Introduzione}
-Testo dell'introduzione. Esempio di citazione~\cite{knuth1984texbook}.
+Testo dell'introduzione. Esempio di citazione~\cite{righi1897ottica}.
 
 \chapter{Secondo capitolo}
 Testo.
@@ -50,7 +50,8 @@ Testo.
 \clearpage
 \addcontentsline{toc}{chapter}{Bibliografia}
 \bibliographystyle{plain}
-\bibliography{references}
+\nocite{*}  % mostra tutte le fonti del .bib anche se non citate (toglilo quando userai \cite)
+\bibliography{bibliografia}
 
 % ---------- Ringraziamenti ----------
 \clearpage
