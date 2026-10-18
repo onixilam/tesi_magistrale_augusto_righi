@@ -14,6 +14,12 @@ Le equazioni di maxwell nel vuoto sono le seguenti:
 
 Per dimostrare che le equazioni di Maxwell implicano l'esistenza di onde elettromagnetiche, bisogna manipolarle fino ad ottenere 
 un'equazione differenziale nella forma dell'equazione di d'Alembert.\\
+L'equazione di d'Alembert è un'equazione differenziale parziale del secondo ordine che descrive la propagazione di onde in un mezzo ed è scritta come:
+\begin{equation}
+    \nabla^2 f(\vec{r},t) - \frac{1}{v^2}\frac{\partial^2 f(\vec{r},t)}{\partial t^2} = 0
+\end{equation}
+
+per dimostrare che le onde elettromagnetiche soddisfano questa equazione, dobbiamo manipolare le equazioni di Maxwell per ottenere un'equazione simile per i campi elettrici e magnetici.\\
 Iniziamo prendendo il rotore di \eqref{eq:maxwell-faraday}:
 
 \begin{equation}\label{eq:maxwellxrotor}
@@ -47,4 +53,9 @@ che può essere riscritta come:
     \vec{\nabla}^2 \vec{E} - \mu_0 \varepsilon_0 \frac{\partial^2 \vec{E}}{\partial t^2} = 0
 \end{equation}
 questa è l'equazione di d'Alembert per il campo elettrico.\\ 
+Ponendo $c = \frac{1}{\sqrt{\mu_0 \varepsilon_0}}$, otteniamo:
+\begin{equation}
+    \vec{\nabla}^2 \vec{E} - \frac{1}{c^2} \frac{\partial^2 \vec{E}}{\partial t^2} = 0  
+\end{equation}
+
 Un ragionamento analogo può essere condotto per il campo magnetico, ottenendo un'equazione simile.
