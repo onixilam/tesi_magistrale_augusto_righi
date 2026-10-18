@@ -115,7 +115,7 @@
   {5ex}
   {\huge}
 
-
+\titlelabel{\thetitle.\quad} % aggiunge un punto dopo il numero di sezione
 
 % ===============================
 % Headings & TOC
@@ -129,7 +129,14 @@
 % -----------------------
 % Marks (chapter/section)
 % -----------------------
+% Ogni volta che inizia un capitolo, imposta i marcatori dell'intestazione:
+% \leftmark  = "numero. titolo del capitolo" (es. "2. Contesto storico")
+% \rightmark = vuoto (azzera la sezione precedente)
 \renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
+
+% Ogni volta che inizia una sezione, aggiorna solo il marcatore destro:
+% \rightmark = "numero. titolo della sezione" (es. "2.1. Le equazioni di Maxwell")
+% \leftmark resta invariato (capitolo corrente)
 \renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
 
 % -----------------------
@@ -377,7 +384,7 @@
 	% \chapter{Introduction}
     \thispagestyle{chapterplain}
 	\label{chap:introduzione}
-    \include{capitoli/01_introduzione} % INTRODUZIONE DA ALTRO FILE
+    \include{capitoli/00_introduzione/00_introduzione} % INTRODUZIONE DA ALTRO FILE
 	\clearpage{\pagestyle{empty}\cleardoublepage}
 	
     % ==============================
@@ -386,9 +393,18 @@
     % \chapter{Contesto Storico}
     \thispagestyle{chapterplain}
     \label{chap:contesto_storico}
-	\include{capitoli/02_contesto_storico} % CONTEXTO STORICO DA ALTRO FILE
+	\include{capitoli/02_contesto_storico/02_contesto_storico} % CONTEXTO STORICO DA ALTRO FILE
 	\clearpage{\pagestyle{empty}\cleardoublepage}
 	
+% ==============================
+    % nuovo capitolo
+    % ==============================
+    \chapter{Teoria delle onde elettromagnetiche}
+    \thispagestyle{chapterplain}
+    \label{chap:teoria_onde_em}
+	\include{capitoli/teoria_onde_em}
+	% \clearpage{\pagestyle{empty}\cleardoublepage}
+
     % ==============================
     % nuovo capitolo
     % ==============================

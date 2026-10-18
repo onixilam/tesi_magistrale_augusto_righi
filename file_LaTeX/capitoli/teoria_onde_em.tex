@@ -1,0 +1,50 @@
+% \chapter*{Teoria delle onde elettromagnetiche}
+% \addcontentsline{toc}{chapter}{Teoria delle onde elettromagnetiche}
+
+Le equazioni di maxwell nel vuoto sono le seguenti:
+
+\begin{subequations}\label{eq:maxwell}
+\begin{align}
+\vec{\nabla} \cdot \vec{E} &= 0 \label{eq:maxwell-gauss-e}\\
+\vec{\nabla} \cdot \vec{B} &= 0 \label{eq:maxwell-gauss-b}\\
+\vec{\nabla} \times \vec{E} &= -\frac{\partial \vec{B}}{\partial t} \label{eq:maxwell-faraday}\\
+\vec{\nabla} \times \vec{B} &= \mu_0 \varepsilon_0 \frac{\partial \vec{E}}{\partial t} \label{eq:maxwell-ampere}
+\end{align}
+\end{subequations}
+
+Per dimostrare che le equazioni di Maxwell implicano l'esistenza di onde elettromagnetiche, bisogna manipolarle fino ad ottenere 
+un'equazione differenziale nella forma dell'equazione di d'Alembert.\\
+Iniziamo prendendo il rotore di \eqref{eq:maxwell-faraday}:
+
+\begin{equation}\label{eq:maxwellxrotor}
+\vec{\nabla} \times (\vec{\nabla} \times \vec{E}) = -\frac{\partial}{\partial t} (\vec{\nabla} \times \vec{B})
+\end{equation}
+
+per risolvere il membro di sinistra, possiamo usare l'identità vettoriale:
+\begin{equation}    
+    \vec{A} \times (\vec{B} \times \vec{C}) = \vec{B} (\vec{A} \cdot \vec{C}) - \vec{C} (\vec{A} \cdot \vec{B})
+\end{equation}
+
+che applicata al nostro caso diventa:
+\begin{equation}
+    \vec{\nabla} \times (\vec{\nabla} \times \vec{E}) = \vec{\nabla} (\vec{\nabla} \cdot \vec{E}) - \vec{\nabla}^2 \vec{E}
+\end{equation}
+ora, dalla \eqref{eq:maxwell-gauss-e} sappiamo che $\vec{\nabla} \cdot \vec{E} = 0$, quindi il primo termine del membro di 
+sinistra si annulla e rimane:  
+\begin{equation}
+    \vec{\nabla} \times (\vec{\nabla} \times \vec{E}) = - \vec{\nabla}^2 \vec{E}
+\end{equation}
+quindi il membro di sinistra della \eqref{eq:maxwellxrotor} diventa:
+\begin{equation}
+    - \vec{\nabla}^2 \vec{E} = -\frac{\partial}{\partial t} (\vec{\nabla} \times \vec{B})   
+\end{equation}
+ora, sostituendo il membro di destra della \eqref{eq:maxwellxrotor} con la \eqref{eq:maxwell-ampere}, otteniamo:
+\begin{equation}
+    - \vec{\nabla}^2 \vec{E} = -\mu_0 \varepsilon_0 \frac{\partial^2 \vec{E}}{\partial t^2}
+\end{equation}
+che può essere riscritta come:
+\begin{equation}
+    \vec{\nabla}^2 \vec{E} - \mu_0 \varepsilon_0 \frac{\partial^2 \vec{E}}{\partial t^2} = 0
+\end{equation}
+questa è l'equazione di d'Alembert per il campo elettrico.\\ 
+Un ragionamento analogo può essere condotto per il campo magnetico, ottenendo un'equazione simile.
