@@ -104,7 +104,7 @@
 
 
 % ===============================
-% Chapter/Section appearance  (PUT THIS HERE)
+% Chapter/Section appearance
 % ===============================
 \usepackage{titlesec}
 
@@ -142,36 +142,19 @@
 % -----------------------
 % Header
 % -----------------------
-% Left: current chapter/section
+% Left: capitolo corrente (il numero di pagina NON sta più qui)
 \fancyhead[L]{\small\nouppercase{\leftmark}}
 
-% Right: page number (2.1, 2.2 ...)
-\fancyhead[R]{\small\thepage}
-
 % -----------------------
-% Footer
+% Footer: solo numero di pagina al centro
 % -----------------------
-
-% Odd pages -> thesis title on left
-\fancyfoot[L]{%
-\ifodd\value{page}
-\footnotesize \textit{\ThesisTitle}
-\fi
-}
-
-% Even pages -> course/university on right
-\fancyfoot[R]{%
-\ifodd\value{page}
-\else
-\footnotesize \CourseUniversity
-\fi
-}
+\fancyfoot[C]{\thepage}
 
 % -----------------------
 % Lines
 % -----------------------
 \renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
 
 % -----------------------
 % First page of chapters
@@ -189,42 +172,34 @@
 \fancypagestyle{chapterstar}{
 \fancyhf{}
 \fancyfoot[C]{\thepage}
-
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 }
 
+% -----------------------
+% Prima pagina dei capitoli
+% -----------------------
 \fancypagestyle{chapterplain}{
 \fancyhf{}
-\fancyfoot[L]{\footnotesize \CourseUniversity}
-\fancyfoot[R]{\footnotesize \thepage}
+\fancyfoot[C]{\thepage}
 \renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
 }
 
+% -----------------------
+% Pagine interne dei capitoli
+% -----------------------
 \fancypagestyle{chapternum}{
   \fancyhf{}
 
-  % Header
+  % Header: sezione corrente a sinistra
   \fancyhead[L]{\small\rightmark}
-  \fancyhead[R]{\small\thepage}
 
-  % Footer
-  \fancyfoot[R]{%
-    \ifodd\value{page}
-      \footnotesize \textit{\ThesisTitle}
-    \fi
-  }
-
-  \fancyfoot[L]{%
-    \ifodd\value{page}
-    \else
-      \footnotesize \CourseUniversity
-    \fi
-  }
+  % Footer: numero di pagina al centro
+  \fancyfoot[C]{\thepage}
 
   \renewcommand{\headrulewidth}{0.4pt}
-  \renewcommand{\footrulewidth}{0.4pt}
+  \renewcommand{\footrulewidth}{0pt}
 }
 
 
@@ -255,12 +230,12 @@
 % ===============================
 % Custom Commands (optional)
 % ===============================
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\vect}[1]{\boldsymbol{#1}}
+% \newcommand{\R}{\mathbb{R}}
+% \newcommand{\vect}[1]{\boldsymbol{#1}}
 
-\newcommand{\AuthorName}{\textit{X.Y.Surname}}
-\newcommand{\ThesisTitle}{Title of Thesis}
-\newcommand{\CourseUniversity}{BSc/MSc, Course, Department, University of Bologna}
+% \newcommand{\AuthorName}{\textit{X.Y.Surname}}
+% \newcommand{\ThesisTitle}{Title of Thesis}
+% \newcommand{\CourseUniversity}{BSc/MSc, Course, Department, University of Bologna}
 
 \setlength{\headheight}{14pt}
 
@@ -364,19 +339,17 @@
     % ==============================
     % Nomenclatura
     % ==============================
-    \chapter*{Nomenclature}
-    \addcontentsline{toc}{chapter}{Nomenclature}
-    \thispagestyle{chapterstar}
-	\label{Nomencla}
-	% \input{Nomenclature}
-    \clearpage{\pagestyle{empty}\cleardoublepage}
+    % \chapter*{Nomenclature}
+    % \addcontentsline{toc}{chapter}{Nomenclature}
+    % \thispagestyle{chapterstar}
+	% \label{Nomencla}
+	% % \input{Nomenclature}
+    % \clearpage{\pagestyle{empty}\cleardoublepage}
 
     \mainmatter 
     \pagestyle{chapternum}
     
     \pagenumbering{arabic}
-    \counterwithin{page}{chapter}
-    \renewcommand{\thepage}{\thechapter.\arabic{page}}
     
     % ==============================
     % Introduzione
@@ -396,7 +369,7 @@
 	\include{capitoli/02_contesto_storico/02_contesto_storico} % CONTEXTO STORICO DA ALTRO FILE
 	\clearpage{\pagestyle{empty}\cleardoublepage}
 	
-% ==============================
+    % ==============================
     % nuovo capitolo
     % ==============================
     \chapter{Teoria delle onde elettromagnetiche}
