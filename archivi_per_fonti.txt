@@ -1,0 +1,33 @@
+Archivi generali, gratuiti:
+
+Internet Archive (archive.org): enorme raccolta di libri scansionati, con ricerca nel testo. Ci trovi molte opere di Fresnel, Young, Hertz e riviste ottocentesche.
+
+Gallica (gallica.bnf.fr): biblioteca digitale della Biblioteca nazionale di Francia. È la fonte migliore per Fresnel (Œuvres complètes), per i Comptes rendus dell’Académie des sciences e per gli Annales de chimie et de physique.
+
+Google Libri (books.google.com): utile per cercare una frase e individuare in quale opera compare. Filtra per “Libri completi” o usa lo strumento di ricerca per testi di pubblico dominio.
+
+HathiTrust (hathitrust.org): scansioni di biblioteche universitarie, spesso con riviste complete in annate.
+
+e-rara (e-rara.ch): biblioteca digitale svizzera di libri antichi, buona per opere in latino del Sei-Settecento.
+
+##########################################
+
+Riviste scientifiche storiche:
+
+Philosophical Transactions della Royal Society (royalsocietypublishing.org): gli articoli più vecchi sono di norma liberamente consultabili.
+
+Annalen der Physik (Wiley, ma le annate storiche sono spesso su archive.org): per gli articoli originali di Hertz in tedesco.
+
+Il Nuovo Cimento: la rivista dove pubblicava anche Righi. L’archivio storico è curato dalla Società Italiana di Fisica.
+
+##########################################
+
+Risorse italiane e legate a Righi:
+
+Museo Galileo di Firenze (museogalileo.it): biblioteca digitale e banche dati di strumenti storici, molto adatta alla storia degli strumenti e dell’ottica.
+Sistema bibliotecario dell’Università di Bologna (SBA): ha biblioteche digitali e un patrimonio storico. Controlla se esistono un fondo Righi o materiali presso il Dipartimento di Fisica e Astronomia e il Museo di Palazzo Poggi, perché per la tesi sarebbero di valore unico.
+Memorie dell’Accademia delle Scienze dell’Istituto di Bologna: Righi vi pubblicò molti lavori, e le annate sono in parte digitalizzate.
+Wikisource e Wikimedia Commons: più utili per trovare immagini di apparati e figure che come fonte primaria.
+Per le fonti antiche (Tolomeo, Grimaldi)
+Grimaldi, Physico-mathesis de lumine (Bologna, 1665): cerca il titolo su Google Libri, Internet Archive o e-rara. Controlla prima la tesi di Giada Cacciapaglia, che dovrebbe già indicarti le edizioni utili.
+Tolomeo, Ottica: l’originale greco è perduto, ci è arrivata una traduzione latina medievale dall’arabo. Per questa conviene appoggiarsi a un’edizione critica o a studi specialistici, e non a una scansione qualunque.
