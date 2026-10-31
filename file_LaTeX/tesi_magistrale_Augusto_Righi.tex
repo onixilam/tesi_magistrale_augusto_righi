@@ -252,10 +252,9 @@
     
     \begin{titlepage}
         \begin{center}
-            \includegraphics[width = 6.5cm, height = 6.5cm]{immagini/Unibo_logo.png}
-        
-            {\large{\bf{Department of Electrical, Electronic, and Information Engineering "Guglielmo Marconi" - DEI }}}
-        
+            % include il logo che si trova nella cartella immagini
+            % \includegraphics[width = 6.5cm, height = 6.5cm]{immagini/Unibo_logo.png}
+            
             {\Large{\bf{Laurea Magistrale in Didattica, Storia ed Epistemologia della Fisica}}}
         
             {\bfseries\fontsize{26pt}{20pt}\selectfont
@@ -264,25 +263,29 @@
                 Onde elettromagnetiche: l'analogia con l'ottica\par}
             
         \end{center}
-        
-        \begin{minipage}[t]{0.5\textwidth}
-            {\Large{\bf Relatore: \\ Prof. Augusto Righi}}
-            \vspace{6mm}
 
-            {\Large{\bf Correlatore: \\ Non Pervenuto}}
-            
-        \end{minipage}
-        \hfill
-        \begin{minipage}[t]{0.40\textwidth}\raggedleft
-            {\Large{\bf Laureando: \\ Leonardo Amadori}}
-        \end{minipage}
+\vfill
 
-        \rule[0.5mm]{15.3845cm}{0.4mm}
-        \vspace{-\baselineskip}
-        \begin{center}
-            {\large\bfseries Graduation Session Month 20XX\\}
-            {\large\bfseries Academic Year 20XX/20XX}
-        \end{center}
+% Qui sotto c'è la parte di testo che appare in basso a sinistra e a destra della pagina del frontespizio,
+% con i nomi del relatore, correlatore e laureando. Puoi modificare i nomi come preferisci.
+\begin{minipage}[t]{0.5\textwidth}
+    {\Large{\bf Relatore: \\ Prof. Eugenio Bertozzi}}
+    \vspace{6mm}
+
+    {\Large{\bf Correlatore: \\ Non Pervenuto}}
+    
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.40\textwidth}\raggedleft
+    {\Large{\bf Laureando: \\ Leonardo Amadori}}
+\end{minipage}
+
+\rule[0.5mm]{15.3845cm}{0.4mm}
+\vspace{-\baselineskip}
+\begin{center}
+    % {\large\bfseries Graduation Session Month 20XX\\}
+    {\large\bfseries Anno Accademico 2025/2026}
+\end{center}
 
     \end{titlepage}
     \clearpage{\pagestyle{empty}\cleardoublepage}
@@ -331,10 +334,10 @@
     % ==============================
     % Lista delle tabelle
     % ==============================
-    \listoftables
-    \thispagestyle{chapterstar}
-    \addcontentsline{toc}{chapter}{List of Tables}
-    \clearpage{\pagestyle{empty}\cleardoublepage}
+    % \listoftables
+    % \thispagestyle{chapterstar}
+    % \addcontentsline{toc}{chapter}{List of Tables}
+    % \clearpage{\pagestyle{empty}\cleardoublepage}
 
     % ==============================
     % Nomenclatura
@@ -346,8 +349,8 @@
 	% % \input{Nomenclature}
     % \clearpage{\pagestyle{empty}\cleardoublepage}
 
-    \mainmatter 
-    \pagestyle{chapternum}
+    \mainmatter % Now Use Arabic numerals for page numbers 
+    \pagestyle{chapternum} % uso lo stile di intestazione per le pagine interne dei capitoli, con il numero di pagina al centro del piè di pagina
     
     \pagenumbering{arabic}
     
@@ -373,7 +376,7 @@
     % nuovo capitolo
     % ==============================
     \chapter{Teoria delle onde elettromagnetiche}
-    \thispagestyle{chapterplain}
+    % \thispagestyle{chapterplain}
     \label{chap:teoria_onde_em}
 	\include{capitoli/teoria_onde_em}
 	% \clearpage{\pagestyle{empty}\cleardoublepage}
@@ -381,12 +384,12 @@
     % ==============================
     % nuovo capitolo
     % ==============================
-    \chapter{Methodology}
+    \chapter{Esperimenti}
     \thispagestyle{chapterplain}
-    \label{chap:methodology}
+    \label{chap:Esperimenti}
 	% \input{Chapter3}
 	\clearpage{\pagestyle{empty}\cleardoublepage}
-	
+	\include{capitoli/esperienza_38_riflessione/esperienza_38_riflessione}
 	% ==============================
     % nuovo capitolo
     % ==============================	

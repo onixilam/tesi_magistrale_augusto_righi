@@ -1,0 +1,59 @@
+Observations on the Change in Resistance at the Contact Point of Two Conductors Due to Electrical Irradiation; by V. v. Lang.
+
+(From the Proceedings of the Imperial Academy of Sciences in Vienna, Mathematical and Natural Sciences Class; Vol. CIV, Section Ila, July 1895, submitted by the author.)
+
+Through Branly (1), it became known that exposure to electric waves reduces the resistance of glass tubes filled with metal filament (2), 
+and that a slight vibration of the tube restores the original resistance.
+Lodge (3) later demonstrated that the first phenomenon—and indeed, quite strikingly—occurs even when two metals touch at a single point. He demonstrated this using a device consisting of a flat spiral of iron wire, the outer end of which was pressed against a small piece of aluminum sheet by means of a lever acting on the inner end of the spiral.
+However, this device does not make it easy to study the behavior of different metals, and since I specifically wanted to test the contact between two pieces of carbon, I used a different apparatus, which is shown in the accompanying drawing at approximately one-eighth of its actual size.
+A sturdy brass ruler is positioned horizontally on a stone slab, acting as a single-arm lever. One end of this ruler is cut into a fork shape to support the tips, which, by engaging with a heavy piece of zinc, form the lever’s axis of rotation.
+At the other end is a steel plate on which the lever rests at the top of a vertical screw.
+This screw moves within the two arms of a brass piece bent at two right angles; the lower arm of this piece is secured to a round zinc base.
+
+This design prevents backlash when the screw moves.
+Movement is achieved by a head that is attached to the screw—between the two arms that hold the screw in place—using a recessed locknut. However, to enable very fine adjustments, six holes have been drilled into the side of the screw head; a pin fits into these holes, allowing for very slight rotations.
+Near the lever's axis of rotation (the lever's arms are 5 and 25 cm long), a sliding
+
+***immagine qua***
+
+brass piece is secured with two screws; this piece supports a sleeve on the side,
+so that a linear body A can be clamped in a vertical position within the sleeve's axial bore.
+The second body, B, whose contact with A is to be studied, must be more or less plate-shaped; it is clamped onto a second round zinc base with two screws. If one wishes to investigate the contact between a body and zinc, it is, of course, unnecessary to first attach a zinc plate to the base. This is the case shown in the drawing, which refers to the contact between carbon and zinc.
+The zinc base mentioned last and the zinc piece supporting the lever are, of course, equipped with clamping screws, into which the wires leading to the galvanometer are terminated.
+It appears that another element—preferably a small heating element—needs to be connected to one of these wires.
+The mirror galvanometer used is designed for objective observation and has a resistance of 7,000 ohms. The accompanying directing magnet was adjusted so that, when the needle was at rest, the image of the light source was positioned exactly at one end of the scale, which has a total of 60 divisions over a distance of 1 cm.
+The distance between the scale and the light source was approximately 70 cm. The extent to which the instrument's sensitivity was reduced by removing the roller is shown in the following table, which lists the readings obtained when the resistors shown here were connected to the circuit.
+
+***tabella qua***
+
+To observe the phenomenon in question, the two conductors A and B must be brought into contact, but only slightly enough that the deflection of the galvanometer needle is barely noticeable at the specified sensitivity. This correct position is found by carefully turning the screw downward and exposing the device to electric waves after each small turn.
+As Lodge notes, the now widely used Patent Clark gas lighters—which are based on the principle of Toepler’s influence machine—are particularly well suited for this purpose.
+For the stated purpose, the sparks from an electrophorus—produced by discharging its lid with a grounded brass sphere—are also quite effective and not uncomfortable.
+In the following experiments, both methods of generating electrical waves were used, and the apparatus in question was activated at a distance of approximately 2/3 m from the contact points.
+Once the delicate position at the point of contact between the two metals has been achieved by turning the screw counterclockwise, the galvanometer needle deflects after irradiation due to the reduced resistance, but immediately returns to its resting position.
+The sensitive adjustment has, in fact, been disrupted and must be reestablished; this is a very inconvenient circumstance, especially for demonstrating the phenomenon in lectures.
+However, an examination of the contact between two pieces of carbon revealed a completely different behavior. A round carbon rod (8 mm in diameter) and a small piece of a carbon plate—both of which are used in electrical experiments—were used. Both pieces of carbon were first boiled in aqua regia to remove any metal in particular.
+In the first experiment, conducted according to the previous procedure, it immediately became apparent that, after deflection, the light image remained on the scale and only returned to the position from which it had been deflected after the apparatus was gently shaken. 
+However, the contact had not lost its sensitivity, and the experiment could be repeated as often as desired without the need to readjust the screw.
+It exhibits the same behavior as Branly’s tubes filled with metal filaments, as mentioned at the beginning.
+I soon became convinced, however, that the behavior of carbon just described is not exceptional and that, as long as one avoids even the slightest vibration, the metals behave in exactly the same way.
+At least, I have observed this in the zinc-zinc, aluminum-aluminum, and aluminum-zinc combinations.
+For example, in the last combination, the discharge of the electrophore cover caused the image to be deflected from division line 20.8 to division line 41, which represents a decrease in resistance from nearly ∞ to about 380 ohms.
+The image remained in the deflected position and did not return until the lid was gently placed back on the electrophoresis chamber. However, the contact apparatus and the electrophoresis chamber were on two different tables.
+During the test of the zinc-zinc combination, the galvanometer was set up slightly differently, and the needle’s zero position with the circuit open was at division 19. The contact was then adjusted so that the needle pointed to division 22.
+The gas igniter's sparks moved the needle to mark 31; a light, single tap with the tip of a finger on the side of the device's base returned the needle to mark 22. A second attempt yielded readings of 33 and 25, respectively.
+The image was then deflected by moving the gas lighter closer to the 36 mark, but was returned to 20 by moving the chair backward.
+Deflected again to 40, it was brought down to 34 by someone beating a rug in the neighboring house, and then reduced all the way to 22 by people walking on the floor above the observation room.
+
+
+
+
+
+
+
+
+
+
+
+
+
