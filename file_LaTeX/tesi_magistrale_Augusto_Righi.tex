@@ -1,19 +1,27 @@
 % ===============================
 % Document Class
 % ===============================
+% Classe del documento: "book" (tesi con capitoli), corpo 12pt, formato A4,
+% impaginazione fronte-retro (twoside: margini e intestazioni diversi tra pagine pari e dispari)
 \documentclass[12pt,a4paper,twoside]{book}
 
 % ===============================
 % Encoding & Language
 % ===============================
+% Codifica dei font in uscita (T1): permette sillabazione corretta delle parole accentate
 \usepackage[T1]{fontenc}
+% Codifica del file sorgente (UTF-8): permette di scrivere direttamente lettere accentate come à, è, ù
 \usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
+% Lingue del documento: l'ultima dell'elenco (italiano) è quella principale,
+% quindi "Capitolo", "Indice", ecc. escono in italiano; l'inglese resta disponibile per passaggi in inglese
+\usepackage[english, italian]{babel}
 
 % ===============================
 % Page Layout
 % ===============================
+% Pacchetto per impostare i margini della pagina
 \usepackage{geometry}
+% Margini di 25 mm su tutti e quattro i lati
 \geometry{
     left=25mm,
     right=25mm,
@@ -21,175 +29,260 @@
     bottom=25mm
 }
 
+% Pacchetto per gestire l'interlinea
 \usepackage{setspace}
+% Interlinea di una riga e mezza in tutto il documento
 \onehalfspacing % or \doublespacing if required
 
+% Rientra anche la prima riga del primo paragrafo dopo un titolo (per default LaTeX non lo fa)
 \usepackage{indentfirst}
+% Permette di ruotare singole pagine in orizzontale (ambiente landscape), utile per tabelle larghe
 \usepackage{pdflscape}
 
 % ===============================
 % Fonts
 % ===============================
+% Latin Modern: versione vettoriale e più completa del font Computer Modern, con resa migliore a schermo
 \usepackage{lmodern}        % Improved Computer Modern
+% Micro-ritocchi tipografici (crenatura, sporgenza dei margini) per un testo più uniforme
 \usepackage{microtype}      % Better typography
 
 % ===============================
 % Mathematics
 % ===============================
+% Ambienti e comandi per le formule (align, equation, matrix, ecc.)
 \usepackage{amsmath}
+% Simboli matematici aggiuntivi (frecce, relazioni, insiemi, ecc.)
 \usepackage{amssymb}
+% Font matematici aggiuntivi (ad esempio \mathbb)
 \usepackage{amsfonts}
+% Ambienti per teoremi, definizioni, dimostrazioni
 \usepackage{amsthm}
+% Comando \bm per simboli matematici in grassetto (utile per i vettori)
 \usepackage{bm}             % Bold math symbols
+% Estensioni di amsmath: correzioni e comandi aggiuntivi per le formule
 \usepackage{mathtools}
 
 % ===============================
 % Graphics & Figures
 % ===============================
+% Inclusione di immagini con \includegraphics
 \usepackage{graphicx}
+% Opzione [H] per forzare una figura esattamente dove è scritta nel testo
 \usepackage{float}
+% Permette figure composte da più sotto-figure (a), (b), ...
 \usepackage{subcaption}
+% Personalizzazione delle didascalie di figure e tabelle
 \usepackage{caption}
+% Disegno di schemi e figure direttamente in LaTeX
 \usepackage{tikz}
+% Librerie di TikZ: tipi di frecce, posizionamento relativo dei nodi, calcoli sulle coordinate
 \usetikzlibrary{arrows.meta,positioning,calc}
 
 % ===============================
 % Tables
 % ===============================
+% Tabelle di aspetto professionale (comandi \toprule, \midrule, \bottomrule al posto delle linee fitte)
 \usepackage{booktabs}
+% Celle che occupano più righe (\multirow)
 \usepackage{multirow}
+% Opzioni aggiuntive per definire le colonne delle tabelle
 \usepackage{array}
+% Tabelle che possono continuare su più pagine
 \usepackage{longtable}
+% Tabelle con colonne a larghezza adattabile (colonna X) e larghezza totale prefissata
 \usepackage{tabularx}
 
 % ===============================
 % Algorithms & Code
 % ===============================
+% Ambiente "algorithm" per algoritmi con numerazione e didascalia
 \usepackage{algorithm}
+% Comandi per scrivere lo pseudocodice (\State, \If, \For, ecc.)
 \usepackage{algpseudocode}
 
+% Inserimento di codice sorgente formattato (ambiente lstlisting)
 \usepackage{listings}
+% Gestione dei colori (usata da listings, hyperref, ecc.)
 \usepackage{xcolor}
 
-\lstset{
-    basicstyle=\ttfamily\small,
-    keywordstyle=\color{blue},
-    commentstyle=\color{gray},
-    stringstyle=\color{red},
-    numbers=left,
-    numberstyle=\tiny,
-    frame=single,
-    breaklines=true
-}
+% ===============================
+% Headings & TOC
+% ===============================
+% Permette di far ripartire la numerazione di un contatore dentro un altro (\counterwithin)
+\usepackage{chngcntr} % for \counterwithin
+% Personalizzazione di indice generale e liste di figure/tabelle
+\usepackage{tocloft}
+% Personalizzazione di intestazioni e piè di pagina
+\usepackage{fancyhdr}
+% Attiva lo stile di pagina "fancy" come stile predefinito
+\pagestyle{fancy}
+% Svuota intestazione e piè di pagina predefiniti (testa e piedi vuoti), da riempire poi a mano
+\fancyhf{}
 
 % ===============================
 % Units & Symbols
 % ===============================
+% Scrittura corretta di numeri e unità di misura (\SI, \si, \num)
 \usepackage{siunitx}
+% Impostazioni di siunitx
 \sisetup{
+    % Scrive le unità composte con la barra (m/s) invece che con esponenti negativi (m s^-1)
     per-mode=symbol,
+    % Prende font e impostazioni dal testo circostante, così i numeri hanno lo stesso aspetto del testo
     detect-all
 }
 
 % ===============================
 % Hyperlinks
 % ===============================
+% Link cliccabili nel PDF (indice, riferimenti, citazioni, URL) e segnalibri
 \usepackage{hyperref}
+% Impostazioni dei link
 \hypersetup{
+    % Colora il testo dei link invece di metterlo in un riquadro
     colorlinks=true,
+    % Colore dei riferimenti interni (capitoli, figure, equazioni)
     linkcolor=blue,
+    % Colore delle citazioni bibliografiche
     citecolor=blue,
+    % Colore degli indirizzi web
     urlcolor=blue
 }
-
 
 % ===============================
 % Chapter/Section appearance
 % ===============================
+% Pacchetto per cambiare l'aspetto dei titoli di capitoli e sezioni
 \usepackage{titlesec}
 
 % Chapters: small "Chapter X", big title, better spacing
+% Formato dei titoli dei capitoli in stile "display" (etichetta e titolo su righe separate):
+% 1) stile base: grassetto
+% 2) etichetta: "Capitolo N" in corpo grande (\chaptername diventa "Capitolo" grazie a babel in italiano)
+% 3) spazio tra etichetta e titolo: 5ex
+% 4) stile del titolo: corpo molto grande
 \titleformat{\chapter}[display]
   {\normalfont\bfseries}
   {\Large\chaptername\ \thechapter}
   {5ex}
   {\huge}
 
+% Aggiunge un punto e uno spazio dopo il numero di sezioni e sottosezioni (es. "2.1. Titolo")
 \titlelabel{\thetitle.\quad} % aggiunge un punto dopo il numero di sezione
 
-% ===============================
-% Headings & TOC
-% ===============================
-\usepackage{chngcntr} % for \counterwithin
-\usepackage{tocloft}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
 
-% -----------------------
+% Impostazioni di aspetto per il codice inserito con listings
+\lstset{
+    % Carattere a spaziatura fissa e dimensione piccola
+    basicstyle=\ttfamily\small,
+    % Colore delle parole chiave del linguaggio
+    keywordstyle=\color{blue},
+    % Colore dei commenti nel codice
+    commentstyle=\color{gray},
+    % Colore delle stringhe
+    stringstyle=\color{red},
+    % Numerazione delle righe a sinistra
+    numbers=left,
+    % Dimensione molto piccola per i numeri di riga
+    numberstyle=\tiny,
+    % Riquadro attorno al blocco di codice
+    frame=single,
+    % Va a capo automaticamente se la riga è troppo lunga
+    breaklines=true
+}
+
+% ===============================
 % Marks (chapter/section)
-% -----------------------
+% ===============================
+
 % Ogni volta che inizia un capitolo, imposta i marcatori dell'intestazione:
 % \leftmark  = "numero. titolo del capitolo" (es. "2. Contesto storico")
 % \rightmark = vuoto (azzera la sezione precedente)
+% (\markboth imposta insieme il marcatore sinistro e quello destro)
 \renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
 
 % Ogni volta che inizia una sezione, aggiorna solo il marcatore destro:
 % \rightmark = "numero. titolo della sezione" (es. "2.1. Le equazioni di Maxwell")
 % \leftmark resta invariato (capitolo corrente)
+% (\markright cambia solo il marcatore destro)
 \renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
 
-% -----------------------
+% ===============================
 % Header
-% -----------------------
+% ===============================
 % Left: capitolo corrente (il numero di pagina NON sta più qui)
+% Mette nell'intestazione, a sinistra, il marcatore sinistro in corpo piccolo;
+% \nouppercase evita che fancyhdr lo trasformi in maiuscolo
 \fancyhead[L]{\small\nouppercase{\leftmark}}
 
-% -----------------------
+% ===============================
 % Footer: solo numero di pagina al centro
-% -----------------------
+% ===============================
+% Mette il numero di pagina al centro del piè di pagina
 \fancyfoot[C]{\thepage}
 
-% -----------------------
+% ===============================
 % Lines
-% -----------------------
+% ===============================
+% Spessore della linea sotto l'intestazione: 0,4 pt
 \renewcommand{\headrulewidth}{0.4pt}
+% Nessuna linea sopra il piè di pagina
 \renewcommand{\footrulewidth}{0pt}
 
-% -----------------------
+% ===============================
 % First page of chapters
-% -----------------------
+% ===============================
+% Ridefinisce lo stile "plain", che LaTeX applica da solo alla prima pagina di ogni capitolo
 \fancypagestyle{plain}{
+% Svuota intestazione e piè di pagina
 \fancyhf{}
+% Solo il numero di pagina al centro in basso
 \fancyfoot[C]{\thepage}
+% Nessuna linea sotto l'intestazione
 \renewcommand{\headrulewidth}{0pt}
+% Nessuna linea sopra il piè di pagina
 \renewcommand{\footrulewidth}{0pt}
 }
 
-% -----------------------
+% ===============================
 % Unnumbered chapters
-% -----------------------
+% ===============================
+% Stile per le pagine dei capitoli senza numero (Abstract, Ringraziamenti, indici):
+% solo numero di pagina in basso, senza intestazione
 \fancypagestyle{chapterstar}{
+% Svuota intestazione e piè di pagina
 \fancyhf{}
+% Numero di pagina al centro in basso
 \fancyfoot[C]{\thepage}
+% Nessuna linea sotto l'intestazione
 \renewcommand{\headrulewidth}{0pt}
+% Nessuna linea sopra il piè di pagina
 \renewcommand{\footrulewidth}{0pt}
 }
 
-% -----------------------
+% ===============================
 % Prima pagina dei capitoli
-% -----------------------
+% ===============================
+% Stile per la prima pagina dei capitoli numerati (applicato con \thispagestyle):
+% solo numero di pagina in basso, senza intestazione
 \fancypagestyle{chapterplain}{
+% Svuota intestazione e piè di pagina
 \fancyhf{}
+% Numero di pagina al centro in basso
 \fancyfoot[C]{\thepage}
+% Nessuna linea sotto l'intestazione
 \renewcommand{\headrulewidth}{0pt}
+% Nessuna linea sopra il piè di pagina
 \renewcommand{\footrulewidth}{0pt}
 }
 
-% -----------------------
+% ===============================
 % Pagine interne dei capitoli
-% -----------------------
+% ===============================
+% Stile per le pagine interne dei capitoli: sezione corrente in alto, numero di pagina in basso
 \fancypagestyle{chapternum}{
+  % Svuota intestazione e piè di pagina
   \fancyhf{}
 
   % Header: sezione corrente a sinistra
@@ -198,7 +291,9 @@
   % Footer: numero di pagina al centro
   \fancyfoot[C]{\thepage}
 
+  % Linea sotto l'intestazione di 0,4 pt
   \renewcommand{\headrulewidth}{0.4pt}
+  % Nessuna linea sopra il piè di pagina
   \renewcommand{\footrulewidth}{0pt}
 }
 
@@ -206,12 +301,15 @@
 % ===============================
 % Appendices
 % ===============================
+% Comandi e ambienti per gestire le appendici (ambiente appendices, titoli personalizzabili)
 \usepackage{appendix}
 
 % ===============================
 % Nomenclature / Acronyms
 % ===============================
+% Pacchetto per creare l'elenco dei simboli (nomenclatura)
 \usepackage{nomencl}
+% Attiva la raccolta delle voci di nomenclatura durante la compilazione
 \makenomenclature
 
 % \usepackage[acronym]{glossaries}
@@ -220,11 +318,13 @@
 % ===============================
 % PDF Inclusion
 % ===============================
+% Permette di inserire pagine di altri PDF nel documento (\includepdf)
 \usepackage{pdfpages}
 
 % ===============================
 % Line Breaking & Widow Control
 % ===============================
+% Evita righe isolate a inizio o fine pagina (vedove e orfane) di ogni tipo di paragrafo
 \usepackage[all]{nowidow}
 
 % ===============================
@@ -237,209 +337,268 @@
 % \newcommand{\ThesisTitle}{Title of Thesis}
 % \newcommand{\CourseUniversity}{BSc/MSc, Course, Department, University of Bologna}
 
+% Altezza riservata all'intestazione: 14 pt (evita gli avvisi di fancyhdr sull'altezza insufficiente)
 \setlength{\headheight}{14pt}
 
 % ===============================
 % End of Preamble
 % ===============================
 
-
+% Inizio del documento vero e proprio: da qui in poi viene stampato il contenuto
 \begin{document}
 
     %Only for title page 
-    \setlength{\parindent}{15pt}
-    \setlength{\parskip}{15mm}
-    
-    \begin{titlepage}
-        \begin{center}
-            % include il logo che si trova nella cartella immagini
-            % \includegraphics[width = 6.5cm, height = 6.5cm]{immagini/Unibo_logo.png}
-            
-            {\Large{\bf{Laurea Magistrale in Didattica, Storia ed Epistemologia della Fisica}}}
-        
-            {\bfseries\fontsize{26pt}{20pt}\selectfont
-                \setlength{\lineskip}{2pt}%
-                \setlength{\lineskiplimit}{0pt}%
-                Onde elettromagnetiche: l'analogia con l'ottica\par}
-            
-        \end{center}
+%Only for title page
+% Rientro della prima riga dei paragrafi: nessuno, per il frontespizio
+\setlength{\parindent}{0pt}
+% Spazio aggiuntivo tra i paragrafi: nessuno, per il frontespizio
+\setlength{\parskip}{0pt}
 
-\vfill
-
-% Qui sotto c'è la parte di testo che appare in basso a sinistra e a destra della pagina del frontespizio,
-% con i nomi del relatore, correlatore e laureando. Puoi modificare i nomi come preferisci.
-\begin{minipage}[t]{0.5\textwidth}
-    {\Large{\bf Relatore: \\ Prof. Eugenio Bertozzi}}
-    \vspace{6mm}
-
-    {\Large{\bf Correlatore: \\ Non Pervenuto}}
-    
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.40\textwidth}\raggedleft
-    {\Large{\bf Laureando: \\ Leonardo Amadori}}
-\end{minipage}
-
-\rule[0.5mm]{15.3845cm}{0.4mm}
-\vspace{-\baselineskip}
+% Inizio del frontespizio: pagina a sé, senza numero
+\begin{titlepage}
+% Centra tutto il contenuto fino a \end{center}
 \begin{center}
-    % {\large\bfseries Graduation Session Month 20XX\\}
-    {\large\bfseries Anno Accademico 2025/2026}
+% Nome dell'università: corpo grande, maiuscoletto; $\cdot$ è il puntino centrale; \` è l'accento grave (à)
+{\Large\textsc{Alma Mater Studiorum $\cdot$ Universit\`a di Bologna}}\\[2mm]
+% Linea sottile larga quanto il testo, rialzata di 0,1 cm
+\rule[0.1cm]{\textwidth}{0.1mm}\\
+% Linea spessa larga quanto il testo, rialzata di 0,5 cm
+\rule[0.5cm]{\textwidth}{0.6mm}\\
+% Nome del corso di laurea, in corpo piccolo e grassetto, su più righe (\\ va a capo)
+{\small\bf Laurea Magistrale in Didattica,\\ Storia ed\\ Epistemologia della Fisica}
 \end{center}
 
-    \end{titlepage}
-    \clearpage{\pagestyle{empty}\cleardoublepage}
+% Spazio verticale di 15 mm
+\vspace{15mm}
 
-    \pagenumbering{roman} %page numbering is roman letters for this section
-    \setlength{\parindent}{15pt}
-    \setlength{\parskip}{0pt}
+% Blocco centrato con il titolo della tesi
+\begin{center}
+% Prima riga del titolo: corpo molto grande, grassetto; [3mm] aggiunge 3 mm di spazio dopo l'a capo
+{\LARGE\bf AUGUSTO RIGHI: ESPLORAZIONE}\\[3mm]
+% Seconda riga del titolo
+{\LARGE\bf DELL'ANALOGIA TRA}\\[3mm]
+% Terza riga del titolo
+{\LARGE\bf ONDE ELETTROMAGNETICHE}\\[3mm]
+% Quarta riga del titolo
+{\LARGE\bf E OTTICA}
+\end{center}
+
+% Spazio elastico verticale: spinge ciò che segue in fondo alla pagina
+\vfill
+
+% Evita il rientro all'inizio della riga che segue
+\noindent
+% Riquadro a sinistra largo il 47% del testo, allineato in alto, con il relatore
+\begin{minipage}[t]{0.47\textwidth}
+{\large\bf Relatore:\\
+Chiar.mo Prof.\\
+Eugenio Bertozzi}
+\end{minipage}
+% Spazio elastico orizzontale: spinge il secondo riquadro verso destra
+\hfill
+% Riquadro a destra, con testo allineato a destra, con il nome del laureando
+\begin{minipage}[t]{0.47\textwidth}\raggedleft
+{\large\bf Presentata da:\\
+Leonardo Amadori}
+\end{minipage}
+
+% Spazio verticale di 20 mm
+\vspace{20mm}
+
+% Blocco centrato con sessione e anno accademico
+\begin{center}
+{\large\bf Sessione\\
+Anno Accademico 2025/2026}
+\end{center}
+
+% Fine del frontespizio
+\end{titlepage}
+% Inserisce una pagina bianca, senza numero né intestazione, per far iniziare la pagina successiva sul lato destro (dispari)
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+% Numera le pagine con numeri romani (i, ii, iii...) e riparte da 1: valido per le pagine iniziali
+\pagenumbering{roman} %page numbering is roman letters for this section
+% Ripristina il rientro di 15 pt della prima riga dei paragrafi
+\setlength{\parindent}{15pt}
+% Nessuno spazio aggiuntivo tra i paragrafi
+\setlength{\parskip}{0pt}
+
+% ==============================
+% Abstract
+% ==============================
+% \chapter*{Abstract}
+% \addcontentsline{toc}{chapter}{Abstract}
+% \thispagestyle{chapterstar}
+% \label{abstract_Eng}
+% % \input{Abstract_Eng.tex}
+% \clearpage{\pagestyle{empty}\cleardoublepage} % sezione inattiva perché la tesi è in italiano, ma se vuoi puoi attivarla togliendo il commento
+
+
+% ==============================
+% indice
+% ==============================
+% Stampa l'indice generale (capitoli, sezioni e relativi numeri di pagina)
+\tableofcontents
+% Applica alla pagina dell'indice lo stile con solo il numero di pagina in basso
+\thispagestyle{chapterstar}
+% Chiude la pagina corrente
+\clearpage
+% Torna allo stile "fancy" (con intestazioni) per le pagine successive
+\pagestyle{fancy}
+% Passa alla prossima pagina dispari, inserendo se serve una pagina bianca
+\cleardoublepage
+
+% ==============================
+% Riassunto (abstract in Italiano)
+% ==============================
+% Capitolo senza numero intitolato "Abstract" (l'asterisco toglie la numerazione)
+\chapter*{Abstract}
+% Aggiunge manualmente la voce "Riassunto" all'indice (il capitolo con asterisco non compare da solo)
+\addcontentsline{toc}{chapter}{Riassunto}
+% Applica a questa pagina lo stile con solo il numero in basso
+\thispagestyle{chapterstar}
+% Etichetta per poter citare questa parte con \ref o \pageref
+\label{abstract_It}
+% \input{Abstract_It.tex}
+% Pagina bianca senza numero né intestazione, per far ripartire sul lato destro (dispari)
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+% ==============================
+% Lista delle figure
+% ==============================
+% Aggiunge manualmente la voce "List of Figures" all'indice generale
+\addcontentsline{toc}{chapter}{Elenco delle immagini}
+% Stampa l'elenco di tutte le figure con numero di pagina
+\listoffigures
+% Applica alla pagina dell'elenco lo stile con solo il numero in basso
+\thispagestyle{chapterstar}
+% Pagina bianca senza numero né intestazione, per far ripartire sul lato destro (dispari)
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+% ==============================
+% Lista delle tabelle
+% ==============================
+% \listoftables
+% \thispagestyle{chapterstar}
+% \addcontentsline{toc}{chapter}{List of Tables}
+% \clearpage{\pagestyle{empty}\cleardoublepage}
+
+% ==============================
+% Nomenclatura
+% ==============================
+% \chapter*{Nomenclature}
+% \addcontentsline{toc}{chapter}{Nomenclature}
+% \thispagestyle{chapterstar}
+% \label{Nomencla}
+% % \input{Nomenclature}
+% \clearpage{\pagestyle{empty}\cleardoublepage}
+
+% Inizio del corpo principale della tesi (classe book): i numeri di pagina diventano arabi
+\mainmatter % Now Use Arabic numerals for page numbers 
+% Da qui in poi le pagine usano lo stile "chapternum": sezione corrente in alto, numero di pagina in basso
+\pagestyle{chapternum} % uso lo stile di intestazione per le pagine interne dei capitoli, con il numero di pagina al centro del piè di pagina
+
+% Numera le pagine con numeri arabi (1, 2, 3...) e riparte da 1
+\pagenumbering{arabic}
+
+% ==============================
+% Introduzione
+% ==============================
+% \chapter{Introduction}
+\thispagestyle{chapterplain}
+\label{chap:introduzione}
+\include{capitoli/00_introduzione/00_introduzione} % INTRODUZIONE DA ALTRO FILE
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+% ==============================
+% Capitolo 1: Quadro storiografico e metodologico
+% ==============================
+% \chapter{Quadro Storiografico e Metodologico}
+\thispagestyle{chapterplain}
+\label{chap:quadro_storiografico}
+\include{capitoli/01_quadro_storiografico_e_contesto_storico/01_quadro_storiografico_e_contesto_storico} % CONTEXTO STORICO DA ALTRO FILE
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+% ==============================
+% nuovo capitolo
+% ==============================
+\chapter{Storia delle onde elettromagnetiche e ruolo di Augusto Righi}
+% \thispagestyle{chapterplain}
+\label{chap:storia_onde_em}
+% \include{capitoli/storia_onde_em}
+% \clearpage{\pagestyle{empty}\cleardoublepage}
+
+% ==============================
+% nuovo capitolo
+% ==============================
+\chapter{Ottica delle oscillazioni elettriche}
+\thispagestyle{chapterplain}
+\label{chap:Ottica_oscillazioni}
+% \input{Chapter3}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\include{capitoli/esperienza_38_riflessione/esperienza_38_riflessione}
+% ==============================
+% nuovo capitolo
+% ==============================	
+\chapter{Tra storico e contemporaneo}
+\thispagestyle{chapterplain}
+\label{chap:tra_storico_contemporaneo}
+% \input{Chapter4}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+% ==============================
+% nuovo capitolo
+% ==============================
+\chapter{Results and Discussion}
+\thispagestyle{chapterplain}
+\label{chap:results}
+% \input{Chapter5}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+
+% ==============================
+% conclusioni
+% ==============================
+\chapter{Conclusions}
+\thispagestyle{chapterplain}
+\label{chap:conclusion}
+% \input{Conclusion}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+% ==============================
+% Note
+% ==============================
+\chapter*{Note}
+\phantomsection % crea l'ancora per il link cliccabile nell'indice
+\addcontentsline{toc}{chapter}{Note}
+\thispagestyle{chapterplain}
+\include{capitoli/teoria_onde_em}
+\label{chap:note}
+% \input{Note}
+\clearpage{\pagestyle{empty}\cleardoublepage}
     
-    % ==============================
-    % Abstract
-    % ==============================
-	% \chapter*{Abstract}
-    % \addcontentsline{toc}{chapter}{Abstract}
-    % \thispagestyle{chapterstar}
-	% \label{abstract_Eng}
-	% % \input{Abstract_Eng.tex}
-	% \clearpage{\pagestyle{empty}\cleardoublepage} % sezione inattiva perché la tesi è in italiano, ma se vuoi puoi attivarla togliendo il commento
+\pagestyle{plain}
+\cleardoublepage
+\setcounter{page}{1}
+\renewcommand{\thepage}{B\arabic{page}}
 
-    % ==============================
-    % Riassunto (abstract in Italiano)
-    % ==============================
-	\chapter*{Riassunto}
-    \addcontentsline{toc}{chapter}{Riassunto}
-    \thispagestyle{chapterstar}
-	\label{abstract_It}
-	% \input{Abstract_It.tex}
-	\clearpage{\pagestyle{empty}\cleardoublepage}
-	
-	% ==============================
-    % indice
-    % ==============================
-    \tableofcontents
-    \thispagestyle{chapterstar}
-    \clearpage
-    \pagestyle{fancy}
-    \cleardoublepage
+% ==============================
+% Bibliografia
+% ==============================
+\bibliographystyle{ieeetr}
+\addcontentsline{toc}{chapter}{Bibliografia}
+\nocite{*}
+\bibliography{bibliografia}
 
-    % ==============================
-    % lista delle figure
-    % ==============================
-    \addcontentsline{toc}{chapter}{List of Figures}
-	\listoffigures
-    \thispagestyle{chapterstar}
-	\clearpage{\pagestyle{empty}\cleardoublepage}
-
-    % ==============================
-    % Lista delle tabelle
-    % ==============================
-    % \listoftables
-    % \thispagestyle{chapterstar}
-    % \addcontentsline{toc}{chapter}{List of Tables}
-    % \clearpage{\pagestyle{empty}\cleardoublepage}
-
-    % ==============================
-    % Nomenclatura
-    % ==============================
-    % \chapter*{Nomenclature}
-    % \addcontentsline{toc}{chapter}{Nomenclature}
-    % \thispagestyle{chapterstar}
-	% \label{Nomencla}
-	% % \input{Nomenclature}
-    % \clearpage{\pagestyle{empty}\cleardoublepage}
-
-    \mainmatter % Now Use Arabic numerals for page numbers 
-    \pagestyle{chapternum} % uso lo stile di intestazione per le pagine interne dei capitoli, con il numero di pagina al centro del piè di pagina
-    
-    \pagenumbering{arabic}
-    
-    % ==============================
-    % Introduzione
-    % ==============================
-	% \chapter{Introduction}
-    \thispagestyle{chapterplain}
-	\label{chap:introduzione}
-    \include{capitoli/00_introduzione/00_introduzione} % INTRODUZIONE DA ALTRO FILE
-	\clearpage{\pagestyle{empty}\cleardoublepage}
-	
-    % ==============================
-    % Capitolo 1: Contesto Storico
-    % ==============================
-    % \chapter{Contesto Storico}
-    \thispagestyle{chapterplain}
-    \label{chap:contesto_storico}
-	\include{capitoli/02_contesto_storico/02_contesto_storico} % CONTEXTO STORICO DA ALTRO FILE
-	\clearpage{\pagestyle{empty}\cleardoublepage}
-	
-    % ==============================
-    % nuovo capitolo
-    % ==============================
-    \chapter{Teoria delle onde elettromagnetiche}
-    % \thispagestyle{chapterplain}
-    \label{chap:teoria_onde_em}
-	\include{capitoli/teoria_onde_em}
-	% \clearpage{\pagestyle{empty}\cleardoublepage}
-
-    % ==============================
-    % nuovo capitolo
-    % ==============================
-    \chapter{Esperimenti}
-    \thispagestyle{chapterplain}
-    \label{chap:Esperimenti}
-	% \input{Chapter3}
-	\clearpage{\pagestyle{empty}\cleardoublepage}
-	\include{capitoli/esperienza_38_riflessione/esperienza_38_riflessione}
-	% ==============================
-    % nuovo capitolo
-    % ==============================	
-    \chapter{Experimental Setup}
-    \thispagestyle{chapterplain}
-    \label{chap:experimental-setup}
-	% \input{Chapter4}
-	\clearpage{\pagestyle{empty}\cleardoublepage}
-	
-	% ==============================
-    % nuovo capitolo
-    % ==============================
-    \chapter{Results and Discussion}
-    \thispagestyle{chapterplain}
-    \label{chap:results}
-	% \input{Chapter5}
-	\clearpage{\pagestyle{empty}\cleardoublepage}
-	
-	
-    % ==============================
-    % conclusioni
-    % ==============================
-	\chapter{Conclusions}
-    \thispagestyle{chapterplain}
-	\label{chap:conclusion}
-	% \input{Conclusion}
-	\clearpage{\pagestyle{empty}\cleardoublepage}
-
-    	
-    \pagestyle{plain}
-    \cleardoublepage
-    \setcounter{page}{1}
-    \renewcommand{\thepage}{B\arabic{page}}
-
-    % ==============================
-    % Ringraziamenti
-    % ==============================
-    \pagestyle{chapterstar}
-    \chapter*{Ringraziamenti}
-    \addcontentsline{toc}{chapter}{Ringraziamenti}
-    \thispagestyle{chapterstar}
-	\label{ringraziamenti}
-	% \input{Acknowledgment}
-	\clearpage{\pagestyle{empty}\cleardoublepage}
-
-    % ==============================
-    % Bibliografia
-    % ==============================
-    \bibliographystyle{ieeetr}
-    \addcontentsline{toc}{chapter}{bibliografia}
-    \bibliography{bibliografia}
+% ==============================
+% Ringraziamenti
+% ==============================
+\pagestyle{chapterstar}
+\chapter*{Ringraziamenti}
+\addcontentsline{toc}{chapter}{Ringraziamenti}
+\thispagestyle{chapterstar}
+\label{ringraziamenti}
+% \input{Acknowledgment}
+\clearpage{\pagestyle{empty}\cleardoublepage}
 
 \end{document}

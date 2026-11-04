@@ -26,8 +26,11 @@ Risorse italiane e legate a Righi:
 
 Museo Galileo di Firenze (museogalileo.it): biblioteca digitale e banche dati di strumenti storici, molto adatta alla storia degli strumenti e dell’ottica.
 Sistema bibliotecario dell’Università di Bologna (SBA): ha biblioteche digitali e un patrimonio storico. Controlla se esistono un fondo Righi o materiali presso il Dipartimento di Fisica e Astronomia e il Museo di Palazzo Poggi, perché per la tesi sarebbero di valore unico.
+
 Memorie dell’Accademia delle Scienze dell’Istituto di Bologna: Righi vi pubblicò molti lavori, e le annate sono in parte digitalizzate.
 Wikisource e Wikimedia Commons: più utili per trovare immagini di apparati e figure che come fonte primaria.
 Per le fonti antiche (Tolomeo, Grimaldi)
+
 Grimaldi, Physico-mathesis de lumine (Bologna, 1665): cerca il titolo su Google Libri, Internet Archive o e-rara. Controlla prima la tesi di Giada Cacciapaglia, che dovrebbe già indicarti le edizioni utili.
+
 Tolomeo, Ottica: l’originale greco è perduto, ci è arrivata una traduzione latina medievale dall’arabo. Per questa conviene appoggiarsi a un’edizione critica o a studi specialistici, e non a una scansione qualunque.

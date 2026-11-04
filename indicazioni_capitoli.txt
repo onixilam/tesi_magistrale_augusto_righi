@@ -21,7 +21,7 @@ Libro scritto da Dragoni: Augusto Righi (1850-1920). Un fisico nel mondo della r
 
 %============================% AGGIORNAMENTO DEL 12/11/2026 %============================%
 
-Quando si incontrano citazioni ad esperimenti storici (tipo "specchi di Fresne") Righi lo fa in modo veloce e "superficiale". Nella tesi si approfondisce il caso storico (dove e quando Fresnel ne parla)
+Quando si incontrano citazioni ad esperimenti storici (tipo "specchi di Fresnel") Righi lo fa in modo veloce e "superficiale". Nella tesi si approfondisce il caso storico (dove e quando Fresnel ne parla)
  
 Un piccolo saggio per ciascun esperimento nominato di modo da mostrare che, a partire dall'ottica di Righi, si può ricavare un percorso storico 
  
