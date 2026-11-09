@@ -391,7 +391,7 @@
 % Riquadro a sinistra largo il 47% del testo, allineato in alto, con il relatore
 \begin{minipage}[t]{0.47\textwidth}
 {\large\bf Relatore:\\
-Prof. Eugenio Bertozzi}
+Prof. ... ...}
 \end{minipage}
 % Spazio elastico orizzontale: spinge il secondo riquadro verso destra
 \hfill
@@ -512,14 +512,14 @@ Anno Accademico 2025/2026}
 % ==============================
 % Capitolo 1: Quadro storiografico e metodologico
 % ==============================
-% \chapter{Quadro Storiografico e Metodologico}
+% \chapter{Contesto Storico}
 \thispagestyle{chapterplain}
-\label{chap:quadro_storiografico}
-\include{capitoli/01_quadro_storiografico_e_contesto_storico/01_quadro_storiografico_e_contesto_storico} % CONTEXTO STORICO DA ALTRO FILE
+\label{chap:contesto_storico}
+\include{capitoli/01_contesto_storico/01_contesto_storico} 
 \clearpage{\pagestyle{empty}\cleardoublepage}
 
 % ==============================
-% nuovo capitolo
+% Capitolo 2: Storia delle onde elettromagnetiche e ruolo di Augusto Righi
 % ==============================
 \chapter{Storia delle onde elettromagnetiche e ruolo di Augusto Righi}
 % \thispagestyle{chapterplain}
@@ -528,37 +528,39 @@ Anno Accademico 2025/2026}
 % \clearpage{\pagestyle{empty}\cleardoublepage}
 
 % ==============================
-% nuovo capitolo
+% Capitolo 3: ottica delle oscillazioni elettriche
 % ==============================
 \chapter{Ottica delle oscillazioni elettriche}
-\thispagestyle{chapterplain}
+% \thispagestyle{chapterplain}
 \label{chap:Ottica_oscillazioni}
-% \input{Chapter3}
+\include{capitoli/03_ottica_oscillazioni_elettriche/03_ottica_oscillazioni_elettriche}
 \clearpage{\pagestyle{empty}\cleardoublepage}
 \include{capitoli/esperienza_38_riflessione/esperienza_38_riflessione}
+
 % ==============================
-% nuovo capitolo
+% Capitolo 4: Tra storico e contemporaneo
 % ==============================	
+
 \chapter{Tra storico e contemporaneo}
 \thispagestyle{chapterplain}
 \label{chap:tra_storico_contemporaneo}
 % \input{Chapter4}
 \clearpage{\pagestyle{empty}\cleardoublepage}
 
-% ==============================
-% nuovo capitolo
-% ==============================
-\chapter{Results and Discussion}
-\thispagestyle{chapterplain}
-\label{chap:results}
-% \input{Chapter5}
-\clearpage{\pagestyle{empty}\cleardoublepage}
+% % ==============================
+% % nuovo capitolo
+% % ==============================
+% \chapter{Results and Discussion}
+% \thispagestyle{chapterplain}
+% \label{chap:results}
+% % \input{Chapter5}
+% \clearpage{\pagestyle{empty}\cleardoublepage}
 
 
 % ==============================
 % conclusioni
 % ==============================
-\chapter{Conclusions}
+\chapter{Conclusioni}
 \thispagestyle{chapterplain}
 \label{chap:conclusion}
 % \input{Conclusion}

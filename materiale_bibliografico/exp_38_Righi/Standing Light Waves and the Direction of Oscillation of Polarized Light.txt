@@ -1,0 +1,105 @@
+Stehende Licthwellen und die Schwingungsrichtung polarisirten Lichtes; Von otto Wiener
+
+Standing Light Waves and the Direction of Oscillation of Polarized Light; By Otto Wiener
+
+
+In his investigation of electrodynamic waves in
+air space, Hertz simply determined the phase shift
+of the electric oscillations caused by reflection
+by causing the incident and reflected
+waves to interfere, thereby subjecting the phenomenon
+of standing electric waves to experimental examination.
+The corresponding question in optics—concerning the phase
+change of light upon perpendicular reflection—had, until
+now, still not found a definitive answer.
+Since this had already occupied my thoughts earlier,
+Hertz’s investigation inspired me to attempt, by the same
+method—that is, also with the aid of standing waves—to
+resolve the controversial issue in optics.
+However, standing light waves had not yet been made
+accessible to experimentation. So I thought about
+whether this might be made possible in some way.
+Just as Hertz had used a current path with an activated spark gap
+to investigate standing electrodynamic
+waves,
+and just as Kundt had used a lightly moving powder
+to measure standing air waves,Thus, for the light waves described by Kachweis,
+the only thing that mattered was finding a suitable indication
+that light was moving
+at a given location.
+Of the methods known to us for objectively
+detecting the movement of light—such as through thermal effects, fluorescence,
+breath images, and chemical-photographic effects—
+the latter seemed to me to be the most suitable.
+The standard gelatin plates, however, were
+simply not suitable for
+this purpose. For, apart
+from their opacity, the thickness of such
+a plate is measured in hundredths of a millimeter (I), whereas
+the distance between two consecutive nodes
+of a standing light wave is calculated in ten-thousandths
+of a millimeter.
+Accordingly, about one hundred wave patterns
+could fit along the thickness of a gelatin plate.
+If, therefore, the plate were exposed to the effect of a standing
+light wave and examined after development,
+one would see, at every point on the plate, the superimposed effects of
+100 wave patterns; the plate would
+appear to be uniformly blackened.
+An investigation
+of the standing wave is conceivable only if
+its effect can be observed separately over a distance that is a small
+fraction of the wavelength.
+The task at hand was therefore to determine whether it was possible
+to produce a transparent, light-sensitive layer whose
+thickness y is sufficiently small relative to the wavelength of light.
+While studying the relevant photographic
+literature, I came across references—as early as the daguerreotype—
+that suggested the idea that stationary
+light waves may have played a role, albeit unrecognized,
+in this earliest form of photography.
+As is well known, a daguerreotype is produced by a weak,
+superficial iodination of a silver plate. The resulting
+coloration of the plate is, according to the authors’
+statements, decisive for its light sensitivity. 2,
+This coloration arises, as is well known, through interference and
+depends on the thickness of the silver iodide layer.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

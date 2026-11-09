@@ -1,60 +1,67 @@
 % =====================================================================
 %  BIBLIOGRAFIA
 %  Nel testo cita la fonte con \cite{righi1897ottica}
-% 
-% 
+%
 %  NOTA IMPORTANTE
-%  Con ctrl + shift + p è possibile trovare l'opzione "LaTeX Workshop: sort and align BibTeX file"
+%  Con ctrl + shift + p è possibile trovare l'opzione
+%  "LaTeX Workshop: sort and align BibTeX file"
 %  che mette in ordine alfabetico le voci della bibliografia
+%
+%  CONVENZIONI
+%  - più autori separati da "and" (mai "e"), nella forma Cognome, Nome
+%  - i nomi propri nei titoli sono protetti con le graffe {...},
+%    altrimenti lo stile li trasforma in minuscolo
 % =====================================================================
 
 @article{bertozzi2020augusto,
-  title   = {Augusto Righi and the intuition of the experiment},
   author  = {Bertozzi, Eugenio and others},
+  title   = {{Augusto Righi} and the intuition of the experiment},
   journal = {Il Nuovo Saggiatore},
   volume  = {36},
-  number  = {5-6},
+  number  = {5--6},
   pages   = {51--60},
   year    = {2020}
 }
 
 @book{boyer2023,
-  author    = {Carl B. Boyer},
-  editor    = {A. Mondadori},
-  traducer  = {Adriano Carugo},
-  publisher = {A. Mondadori},
-  title     = {Storia della Matematica},
-  year      = {2023}
+  author    = {Boyer, Carl B.},
+  title     = {Storia della matematica},
+  publisher = {Mondadori},
+  address   = {Milano},
+  year      = {2023},
+  note      = {Traduzione di Adriano Carugo}
 }
+
+@comment{La fonte bibliografica sotto questo commento racconta in breve quali esperienze fece Hertz}
 
 @book{bryant1988heinrich,
   author    = {Bryant, John H.},
-  title     = {Heinrich Hertz, the Beginning of Microwaves:
+  title     = {{Heinrich Hertz}, the Beginning of Microwaves:
                Discovery of Electromagnetic Waves and Opening
-               of the Electromagnetic Spectrum by Heinrich Hertz
+               of the Electromagnetic Spectrum by {Heinrich Hertz}
                in the Years 1886--1892},
   publisher = {The Institute of Electrical and Electronics Engineers},
-  year      = {1988},
   address   = {New York},
+  year      = {1988},
   isbn      = {0879427108},
-  pagetotal = {50}
+  note      = {50 pp.}
 }
 
-@comment{
-@article{dragoni2003corrispondenza,
+@misc{dragoni2003corrispondenza,
   author = {Dragoni, Giorgio and Gottardi, Giovanni and Manferrari, Marina},
   title  = {The Scientific Correspondence of {Augusto Righi}},
-  pages  = {21--35}
+  note   = {pp. 21--35}
 }
-}
+
 @book{dragonirighi2023,
   author    = {Dragoni, Giorgio},
-  title     = {Augusto Righi (1850-1920) Un Fisico nel mondo della Ricerca},
+  title     = {{Augusto Righi} (1850--1920): Un Fisico nel mondo della Ricerca},
   publisher = {Esculapio},
   address   = {Bologna},
   year      = {2023}
 }
 
+@comment{La fonte bibliografica sotto questo commento è usata nell'esperienza numero 38}
 @article{herschel1833absorption,
   author  = {Herschel, John F. W.},
   title   = {{LXIII}. On the Absorption of Light by Coloured Media, viewed in connexion with the Undulatory Theory},
@@ -67,17 +74,29 @@
   year    = {1833}
 }
 
+@comment{La fonte bibliografica sotto questo commento è usata nell'esperienza numero 38}
+@article{lodge1894hertz,
+  author  = {Lodge, Oliver},
+  title   = {The Work of {Hertz}},
+  journal = {Nature},
+  volume  = {50},
+  number  = {1284},
+  pages   = {133--139},
+  month   = jun,
+  year    = {1894}
+}
+
 @book{mencuccini2016fisI,
-  author    = {Corrado Mencuccini e Vittorio Silvestrini},
-  title     = {Fisica - Meccanica e termodinamica},
+  author    = {Mencuccini, Corrado and Silvestrini, Vittorio},
+  title     = {Fisica: Meccanica e termodinamica},
   publisher = {Casa Editrice Ambrosiana},
   address   = {Milano},
   year      = {2016}
 }
 
 @book{mencuccini2016fisII,
-  author    = {Corrado Mencuccini e Vittorio Silvestrini},
-  title     = {Fisica - Elettromagnetismo e ottica},
+  author    = {Mencuccini, Corrado and Silvestrini, Vittorio},
+  title     = {Fisica: Elettromagnetismo e ottica},
   publisher = {Casa Editrice Ambrosiana},
   address   = {Milano},
   year      = {2017}
@@ -96,18 +115,19 @@
 @book{righi1911comete,
   author    = {Righi, Augusto},
   title     = {Comete ed elettroni},
-  subtitle  = {Discorso inaugurale pronunciato il 22 giugno 1910 nella seduta plenaria della {R. Accademia delle Scienze di Bologna}},
   series    = {Attualit{\`a} Scientifiche},
   number    = {13},
   publisher = {Nicola Zanichelli},
   address   = {Bologna},
   year      = {1911},
-  pages     = {63}
+  note      = {Discorso inaugurale pronunciato il 22 giugno 1910 nella
+               seduta plenaria della R. Accademia delle Scienze di Bologna.
+               63 pp.}
 }
 
 @article{trowbridge1920,
   author  = {Trowbridge, Augustus},
-  title   = {Augusto {Righi}},
+  title   = {{Augusto Righi}},
   journal = {Science},
   series  = {New Series},
   volume  = {52},
