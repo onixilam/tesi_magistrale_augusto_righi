@@ -73,7 +73,7 @@
 % Permette figure composte da più sotto-figure (a), (b), ...
 \usepackage{subcaption}
 % Personalizzazione delle didascalie di figure e tabelle
-\usepackage{caption}
+\usepackage[font = {color = gray, bf}, figurename = Fig., labelfont = {it}]{caption} % caption grigia con "Fig." al posto di "Figura"
 % Disegno di schemi e figure direttamente in LaTeX
 \usepackage{tikz}
 % Librerie di TikZ: tipi di frecce, posizionamento relativo dei nodi, calcoli sulle coordinate
@@ -100,7 +100,6 @@
 \usepackage{algorithm}
 % Comandi per scrivere lo pseudocodice (\State, \If, \For, ecc.)
 \usepackage{algpseudocode}
-
 % Inserimento di codice sorgente formattato (ambiente lstlisting)
 \usepackage{listings}
 % Gestione dei colori (usata da listings, hyperref, ecc.)
@@ -197,10 +196,10 @@
 % ===============================
 
 % Ogni volta che inizia un capitolo, imposta i marcatori dell'intestazione:
-% \leftmark  = "numero. titolo del capitolo" (es. "2. Contesto storico")
 % \rightmark = vuoto (azzera la sezione precedente)
 % (\markboth imposta insieme il marcatore sinistro e quello destro)
-\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
+% \leftmark = "Capitolo N.  Titolo del capitolo" (es. "Capitolo 1.  Quadro storiografico e metodologico")
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter.\quad #1}{}}
 
 % Ogni volta che inizia una sezione, aggiorna solo il marcatore destro:
 % \rightmark = "numero. titolo della sezione" (es. "2.1. Le equazioni di Maxwell")
@@ -285,8 +284,8 @@
   % Svuota intestazione e piè di pagina
   \fancyhf{}
 
-  % Header: sezione corrente a sinistra
-  \fancyhead[L]{\small\rightmark}
+  % Header: "Capitolo N. Titolo" a sinistra
+  \fancyhead[L]{\nouppercase{\leftmark}}
 
   % Footer: numero di pagina al centro
   \fancyfoot[C]{\thepage}
@@ -570,6 +569,7 @@ Anno Accademico 2025/2026}
 % Note
 % ==============================
 \chapter*{Note}
+\markboth{Note}{}
 \phantomsection % crea l'ancora per il link cliccabile nell'indice
 \addcontentsline{toc}{chapter}{Note}
 \thispagestyle{chapterplain}
