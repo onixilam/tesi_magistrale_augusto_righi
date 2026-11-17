@@ -337,7 +337,7 @@
 % \newcommand{\CourseUniversity}{BSc/MSc, Course, Department, University of Bologna}
 
 % Altezza riservata all'intestazione: 14 pt (evita gli avvisi di fancyhdr sull'altezza insufficiente)
-\setlength{\headheight}{14pt}
+\setlength{\headheight}{15pt}
 
 % ===============================
 % End of Preamble
@@ -533,7 +533,7 @@ Anno Accademico 2025/2026}
 \thispagestyle{chapterplain}
 \label{chap:Ottica_oscillazioni}
 \include{capitoli/03_ottica_oscillazioni_elettriche/03_ottica_oscillazioni_elettriche}
-\clearpage{\pagestyle{empty}\cleardoublepage}
+% \clearpage{\pagestyle{empty}\cleardoublepage}
 \include{capitoli/03_ottica_oscillazioni_elettriche/esperienza_38_riflessione/esperienza_38_riflessione}
 
 % ==============================
@@ -568,13 +568,13 @@ Anno Accademico 2025/2026}
 % ==============================
 % Note
 % ==============================
-\chapter*{Note}
-\markboth{Note}{}
+\chapter*{Appendice}
+\markboth{Appendice}{}
 \phantomsection % crea l'ancora per il link cliccabile nell'indice
-\addcontentsline{toc}{chapter}{Note}
+\addcontentsline{toc}{chapter}{Appendice}
 \thispagestyle{chapterplain}
 \include{capitoli/note/teoria_onde_em/teoria_onde_em}
-\label{chap:note}
+\label{chap:appendice}
 % \input{Note}
 \clearpage{\pagestyle{empty}\cleardoublepage}
     
@@ -588,7 +588,7 @@ Anno Accademico 2025/2026}
 % ==============================
 \bibliographystyle{ieeetr}
 \addcontentsline{toc}{chapter}{Bibliografia}
-\nocite{*}
+% \nocite{*} % questo comando serve a mostrare in bibliografia anche le fonti che non vengono direttamente citate
 \bibliography{bibliografia}
 
 % ==============================
