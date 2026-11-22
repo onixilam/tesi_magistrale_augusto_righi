@@ -1,0 +1,75 @@
+\paragraph{Rapporto tra $\omega$ e LC}
+
+\label{app:omega_LC}
+In un circuito oscillante ideale, formato da un condensatore di capacità $C$ e da un'induttanza $L$ senza resistenza, la carica $q$ sulle armature soddisfa l'equazione
+\begin{equation}
+    \frac{\mathrm{d}^2 q}{\mathrm{d}t^2} + \frac{1}{LC}\,q = 0 ,
+\end{equation}
+cioè quella di un oscillatore armonico.\\
+La pulsazione è quindi
+\begin{equation}
+    \omega = 2\pi f = \frac{1}{\sqrt{LC}}
+    \qquad\Longrightarrow\qquad
+    f = \frac{1}{2\pi\sqrt{LC}} ,
+\end{equation}
+nota come formula di Thomson: aumentando $L$ o $C$ la frequenza $f$ diminuisce.\\ 
+La lunghezza d'onda dell'onda emessa è
+\begin{equation}
+    \lambda = \frac{c}{f} = 2\pi c\sqrt{LC} ,
+\end{equation}
+con $c$ velocità della luce. 
+Per ottenere onde più corte occorre perciò ridurre sia la capacità sia l'induttanza del circuito.\\
+
+\paragraph{Effetto dell'olio di vaselina}
+
+Immergere le sfere dell'oscillatore in un dielettrico con costante dielettrica relativa $\varepsilon_r$ moltiplica la capacità per $\varepsilon_r$ rispetto al caso dell'aria ($\varepsilon_r \approx 1$), mentre l'induttanza resta invariata, perché l'olio non è magnetico:
+\begin{equation}
+    C_{\mathrm{olio}} = \varepsilon_r\, C_{\mathrm{aria}} .
+\end{equation}
+Di conseguenza, a parità di geometria,
+\begin{equation}
+    f_{\mathrm{olio}} = \frac{f_{\mathrm{aria}}}{\sqrt{\varepsilon_r}} ,
+    \qquad
+    \lambda_{\mathrm{olio}} = \sqrt{\varepsilon_r}\,\lambda_{\mathrm{aria}} ,
+\end{equation}
+dove $\lambda_{\mathrm{olio}}$ indica la lunghezza d'onda emessa nello spazio esterno all'olio. 
+
+Per l'olio di vaselina $\varepsilon_r \approx 2{,}1$--$2{,}2$ 
+% \cite{\textbf{fonte_olio}}, 
+
+quindi $\sqrt{\varepsilon_r} \approx 1{,}5$: 
+la frequenza diminuisce e la lunghezza d'onda aumenta di circa il 50\%. 
+
+Questa stima vale se l'olio riempie tutta la regione in cui è concentrato il campo elettrico tra i conduttori.
+
+\paragraph{Dipendenza di $C$ e $L$ dalla geometria}\mbox{}\\
+
+\noindent \textbf{Capacità.}  Una sfera isolata di raggio $R$, immersa in un mezzo di costante dielettrica relativa $\varepsilon_r$, ha capacità
+
+\begin{equation}
+    C = 4\pi\,\varepsilon_0\,\varepsilon_r\,R .
+\end{equation}
+L'oscillatore di Hertz, formato da due grosse sfere collegate da un'asta, si comporta come un sistema di due condensatori in serie. Se la distanza tra le sfere è molto maggiore del loro raggio, la capacità equivalente è
+\begin{equation}
+    \frac{1}{C} = \frac{1}{C_1} + \frac{1}{C_2}
+    \qquad\Longrightarrow\qquad
+    C = 2\pi\,\varepsilon_0\,\varepsilon_r\,R ,
+\end{equation}
+con $\varepsilon_r \approx 1$ in aria. Nell'oscillatore di Righi vale la stessa relazione, ma con sfere di raggio $R$ molto minore e con $\varepsilon_r \approx 2{,}1$--$2{,}2$ per l'olio di vaselina. Quando le due sfere sono molto vicine, come accade tra gli elettrodi dell'oscillatore di Righi, la capacità reale è maggiore di quella data da questa formula, che va quindi intesa come una stima per difetto.\\
+
+
+\noindent \textbf{Induttanza.} Per l'asta rettilinea che collega le due sfere, di lunghezza $l$ e raggio $a$ ($l \gg a$), ad alta frequenza si ha
+\begin{equation}
+    L \approx \frac{\mu_0\, l}{2\pi}\left[\ln\!\left(\frac{2l}{a}\right) - 1\right] .
+\end{equation}
+L'induttanza cresce quasi linearmente con la lunghezza $l$ e dipende dal raggio $a$ solo attraverso il logaritmo. Nell'oscillatore di Righi il circuito rettilineo è molto più corto di quello di Hertz, e quindi $L$ è molto minore.\\
+
+\noindent \textbf{Variazione di scala.} Se tutte le lunghezze ($R$, $l$, $a$) vengono moltiplicate per un fattore $k$, sia $C$ sia $L$ risultano moltiplicate (circa) per $k$, quindi
+\begin{equation}
+    C \to kC , \qquad L \to kL ,
+    \qquad
+    \lambda = 2\pi c\sqrt{LC} \to 2\pi c\sqrt{LkC\lambda} ,
+    \qquad
+    f \to \frac{f}{k} .
+\end{equation}
+La lunghezza d'onda emessa è dunque proporzionale alle dimensioni dell'oscillatore.

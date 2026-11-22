@@ -566,16 +566,34 @@ Anno Accademico 2025/2026}
 \clearpage{\pagestyle{empty}\cleardoublepage}
 
 % ==============================
-% Note
+% Appendici
 % ==============================
-\chapter*{Appendice}
-\markboth{Appendice}{}
-\phantomsection % crea l'ancora per il link cliccabile nell'indice
-\addcontentsline{toc}{chapter}{Appendice}
+% \appendix passa alla numerazione con lettere (Appendice A, B, ...):
+% in questo modo \ref{...} stampa la lettera corretta.
+\appendix
+% Il formato dei capitoli usa \chaptername: lo ridefinisco, così nei titoli e nelle
+% intestazioni compare "Appendice A" invece di "Capitolo A"
+\renewcommand{\chaptername}{Appendice}
+% ==============================
+% Appendice A 
+% ==============================
+\chapter{Teoria delle onde elettromagnetiche}
 \thispagestyle{chapterplain}
-\include{capitoli/note/teoria_onde_em/teoria_onde_em}
-\label{chap:appendice}
-% \input{Note}
+\label{chap:appendice_onde}
+% \input al posto di \include: \include fa un \clearpage prima del file e
+% lascerebbe il titolo del capitolo da solo su una pagina
+\input{capitoli/appendice/teoria_onde_em/teoria_onde_em}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+% ==============================
+% Appendice B
+% ==============================
+
+% relazione tra induttanza, capacità e frequenza di oscillazione
+\chapter{Relazione tra induttanza, capacità e frequenza di oscillazione}
+\thispagestyle{chapterplain}
+\label{chap:appendice_oscill}
+\input{capitoli/appendice/oscillatore_frequenza/oscillatore_frequenza}
 \clearpage{\pagestyle{empty}\cleardoublepage}
     
 \pagestyle{plain}
